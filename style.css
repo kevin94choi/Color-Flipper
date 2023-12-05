@@ -9,7 +9,12 @@ html, body {
 }
 
 h4 {
-    font-size: 25px;
+    font-size: 35px;
+    background: linear-gradient(to right, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);
+    background-clip: text; /* Firefox only */
+    animation: a 2s linear infinite;
+    -webkit-background-clip: text; /* needed for chrome/Safari/opera */
+    -webkit-text-fill-color: transparent; /*full support except IE, not on standard track */
 }
 
 .nav-center {
@@ -32,6 +37,12 @@ h4 {
 a {
     text-decoration: none;
     font-size: 25px;
+    color: blue;
+    padding: 10px;
+}
+
+a:hover {
+    color: red;
 }
 
 .container {
@@ -51,10 +62,19 @@ h2 {
     font-size: 30px;
 }
 
+.color {
+    color: aquamarine;
+}
+
 button {
     padding: 20px;
     border-radius: 20px;
-    background-color: whitesmoke;
+    background: none;
     border: 4px black solid;
     font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(130, 37, 54);
 }
